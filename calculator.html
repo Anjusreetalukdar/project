@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Can Validate Input</h2>
+
+<p>Please input a number between 1 and 10:</p>
+
+1st number: <input type="number" id="pnumber" required/><br></br>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01">select oprator</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">+</option>
+    <option value="2">-</option>
+    <option value="3">*</option>
+    <option value="4">/</option>
+  </select>
+</div><br></br>
+2nd number: <input type="number" id="2pnumber" required/>
+
+<button type="button" onclick="myFunction()">answer</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x, text,y,z;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("pnumber").value;
+   y= document.getElementById("2pnumber").value;
+     z= document.getElementById("inputGroupSelect01").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  
+   x=parseInt(x)
+   y=parseInt(y)
+   z=parseInt(z)
+   
+    if(z==1)
+    {
+    text = x+y;
+  }
+  if(z==2)
+    {
+    text = x-y;
+  }
+  if(z==3)
+    {
+    text = x*y;
+  }
+  if(z==4)
+    {
+    text = x/y;
+  }
+  
+  
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
