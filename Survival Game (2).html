@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function myFunction1() {
+var j,i;
+  var x = Math.floor((Math.random() * 1000) + 1);
+  document.getElementById("demo").innerHTML = x;
+var y = Math.floor((Math.random() * 1000) + 1);
+  document.getElementById("demo1").innerHTML = y
+j=x%3
+i=y%3
+if(j==0 && i==1)
+{  
+   document.getElementById("demo3").innerHTML = "Human wins"
+}
+if(j==1 && i==0)
+{  
+   document.getElementById("demo3").innerHTML = "Human wins"
+}
+if(j==0 && i==2)
+{  
+   document.getElementById("demo3").innerHTML = "Human Dies"
+}
+if(j==2 && i==0)
+{  
+   document.getElementById("demo3").innerHTML = "Human Dies"
+}
+if(j==1 && i==2)
+{  
+   document.getElementById("demo3").innerHTML = "Cockroach wins"
+}
+if(j==2 && i==1)
+{  
+   document.getElementById("demo3").innerHTML = "Cockroach wins"
+}
+}
+</script>
+
+<button onclick="myFunction1()">Generate number</button>
+
+
+<p id="demo"></p>
+
+
+
+<p id="demo1"></p>
+<p id="demo3"></p>
+
+
+
+</body>
+</html>
