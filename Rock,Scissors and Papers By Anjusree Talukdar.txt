@@ -1,0 +1,58 @@
+from random import randint
+t=["Rock","Paper","Scissors"]
+computer=t[randint(0,2)]  #retuns any of the values within the index nos
+player=False #Assigning player is false
+while player==False:
+    player=input("Rock, Paper, Scissors? :")#Assigning input value to player
+    if player==computer: #Computer takes a random string value and condition check is done
+        print("Tie!")
+    elif player=="Rock":
+        if computer=="Paper":
+            print("You Lose!",computer,"covers",player)
+        else:
+            print("You win!",player,"smashes",computer)
+    elif player=="Paper":
+        if computer=="Scissors":
+            print("You Lose!",computer,"cut",player)
+        else:
+            print("You win!",player,"covers",computer)
+    elif player=="Scissors":
+        if computer=="Rock":
+            print("You Lose!",computer,"smashes",player)
+        else:
+            print("You win!",player,"cut",computer)
+    else:
+        print("This is not a valid play. check your spelling!")
+    player=False #To keep the loop running infinite time and game continues
+    computer=t[randint(0,2)] 
+
+
+
+OUTPUT
+Rock, Paper, Scissors? :Paper
+Tie!
+Rock, Paper, Scissors? :Paper
+You win! Paper covers Rock
+Rock, Paper, Scissors? :Ppaer
+This is not a valid play. check your spelling!
+Rock, Paper, Scissors? :Paper
+You Lose! Scissors cut Paper
+Rock, Paper, Scissors? :Scissors
+Tie!
+Rock, Paper, Scissors? :Scissors
+Tie!
+Rock, Paper, Scissors? :Paper
+Tie!
+Rock, Paper, Scissors? :Ppaper
+This is not a valid play. check your spelling!
+Rock, Paper, Scissors? :Rock
+You win! Rock smashes Scissors
+Rock, Paper, Scissors? :Scissors
+You win! Scissors cut Paper
+Rock, Paper, Scissors? :Scissors
+You win! Scissors cut Paper
+Rock, Paper, Scissors? :Paper
+Tie!
+Rock, Paper, Scissors? :Rock
+Tie!
+Rock, Paper, Scissors? :

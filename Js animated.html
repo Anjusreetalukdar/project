@@ -1,0 +1,249 @@
+<html>
+<body>
+<div class="wrapper active-element">
+        <header class="main-header">
+            <nav>
+                <div class="masthead active-element">
+                    <h1><a href="#0">Artificial Intelligence</a></h1>
+                    <div id="menu-toggle" class="menu-toggle active-element">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+                <div class="main-nav-list active-element">
+                    <ul>
+                        <li><a href="#0">Demo Reel</a></li>
+                        <li><a href="#0">Faces</a></li>
+                        <li><a href="#0" class="mobile-hide">Blog</a></li>
+                        <li><a href="#0" class="active-link">About</a></li>
+                        <li><a href="#0">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main-contents">
+            <h2>About</h2>
+             <p>Welcome to Project By Anjusree Talukdar</p>
+            <p>Artificial intelligence (AI) is the ability of a computer program or a machine to think and learn. It is also a field of study which tries to make computers "smart". They work on their own without being encoded with commands. John McCarthy came up with the name "Artificial Intelligence" in 1955.
+
+In general use, the term "artificial intelligence" means a programme which mimics human cognition. At least some of the things we associate with other minds, such as learning and problem solving can be done by computers, though not in the same way as we do.[1] Andreas Kaplan and Michael Haenlein define AI as a system’s ability to correctly interpret external data, to learn from such data, and to use those learnings to achieve specific goals and tasks through flexible adaptation.[2]
+
+An ideal (perfect) intelligent machine is a flexible agent which perceives its environment and takes actions to maximize its chance of success at some goal or objective.[3] As machines become increasingly capable, mental faculties once thought to require intelligence are removed from the definition. For example, optical character recognition is no longer perceived as an example of "artificial intelligence": it is just a routine technology.</p>
+        </main>
+        <footer class="main-footer active-element"><span class="copyright">&copy;2020 Anjusree Talukdar</span></footer>
+    </div>
+<style>
+*{
+    padding: 0; border: 0; margin: 0; 
+    box-sizing: border-box;
+    list-style-type: none; /* Styled in normalize.css */
+    text-decoration: none;
+    color: #ccc;
+}
+
+body{
+    background-color: rgb(50, 101, 134);
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1550px;
+    padding-top: .5rem;
+    width: 93%;
+
+}
+
+.main-header a{
+    letter-spacing: .18rem;
+    text-transform: uppercase;
+}
+
+.masthead{
+    /* Both of these are needed to keep the #menu-toggle visible when nav list is active / open. */
+    position: relative;
+    z-index: 1000;
+    /********************************/
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+
+.masthead h1{
+    transition-delay: 450ms;
+}
+
+.menu-toggle{
+    cursor: pointer;
+    width: 55px;
+    z-index: 3;
+}
+
+.menu-toggle div{
+    background-color: #ccc;
+    border-radius: 25px;
+    box-shadow: 0px 3px 13px rgba(0,0,0,.3);
+    height: 7px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(.13,.24,.35,1.64);
+}
+
+.menu-toggle .one,
+.menu-toggle .two{
+    margin-bottom: 7px;
+}
+
+.main-contents{
+    flex: auto;
+}
+
+.main-contents h2{
+    letter-spacing: 1.5px;
+    margin-bottom: .6rem;
+    text-transform: uppercase;
+}
+
+.main-contents p{
+    font-size: 1.1rem;
+    letter-spacing: 1.7px;
+    line-height: 1.35;
+         color: #ccc;
+         transition-delay: 150ms;
+         transition-duration: 850ms;
+}
+
+/*** Just getting silly now ***************************/
+.main-footer span{
+/*      color: #ccc; */
+     transition-delay: 150ms;
+     transition-duration: 1350ms;
+}
+
+/*********************************************/
+.main-footer{
+    font-size: .9em;
+    letter-spacing: .18rem;
+    margin-bottom: 1.5rem;
+     margin-top: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/************* Style and animate the nav overlay ***********************/
+.main-nav-list::before,
+.main-nav-list::after{
+    background-color:#b94071;
+    content:"";
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 0vw;
+    transition: all 100ms ease-in-out 300ms;
+}
+
+.main-nav-list::before{
+    left: 0;
+}
+.main-nav-list::after{
+    right: 0;
+}
+
+.main-nav-list ul{
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    z-index: 2000;
+}
+
+.main-nav-list a{
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition-delay: 130ms;
+}
+
+.main-nav-list .mobile-hide{/** Hide the link when viewing site on mobile devices. **/
+    display: none;
+}
+
+/************* Style the nav elements when active. ***********************/
+.masthead.active h1{
+    text-shadow: 0px 3px 3px rgba(0,0,0,.4);
+}
+
+.menu-toggle.active .one{
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0, 14px) rotate(45deg);
+}
+
+.menu-toggle.active .two{
+    background-color: transparent;
+    box-shadow: none;
+    transform: translateX(-55px);
+}
+
+.menu-toggle.active .three{
+    box-shadow: 0px 3px 13px rgba(0,0,0,.4);
+    transform: translate(0,-14px) rotate(-45deg);
+}
+
+.main-nav-list.active::before,
+.main-nav-list.active::after{
+    width: 25vw;
+/*     transition-duration: 1000ms; */
+}
+.main-nav-list.active ul{
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition-delay: 560ms;
+    transition-duration: 240ms;
+    transition-timing-function: cubic-bezier(.1, .2, .3, 1.4);
+}
+
+.main-nav-list.active a{
+    transition-delay: 600ms;
+    opacity: 1;
+}
+
+
+/*** Just getting silly now ***************************/
+.wrapper.active p{
+     color: rgb(50, 101, 134);
+               transition-delay: 150ms;
+     transition-duration: 350ms;
+}
+
+.main-footer.active span{
+     color: rgb(50, 101, 134);
+          transition-duration: 350ms;
+}
+</style>
+<script>
+var menuToggle = document.querySelector("#menu-toggle");
+var activeElements = document.querySelectorAll(".active-element");
+var toggledMenu = menuToggle.addEventListener("click", function(){
+     // forEach is not supported in IE11
+  // activeElements.forEach(function(e){
+  //     e.classList.toggle("active");
+  // });
+     for(var activated = 0; activated < activeElements.length; activated++){
+          activeElements[activated].classList.toggle("active");
+     }
+})
+</script>
+</body>
+</html>
